@@ -339,9 +339,46 @@
                             },
                             options:{}
                         }); 
-
+                        const config = {
+                        type: 'bar',
+                        data: {
+                            labels:['Happy', "sad", "Anxious"],
+                                datasets:[{
+                                    label: 'daily report',
+                                    data:[
+                                        55,
+                                        23,
+                                        55,
+                                    ],
+                                //backgroundColor: 'green',
+                                backgroundColor: [
+                                    'rgba(255, 206, 86, 0.6)',   
+                                    'rgba(54, 162, 235, 0.6)',
+                                    'rgba(255, 99, 132, 0.6)',
+                                 
+                                ]
+                                }]
+                        },
+                        options: {
+                          plugins: {
+                            title: {
+                              display: true,
+                              text: 'Chart.js Bar Chart - Stacked'
+                            },
+                          },
+                          responsive: true,
+                          scales: {
+                            x: {
+                              stacked: true,
+                            },
+                            y: {
+                              stacked: true
+                            }
+                          }
+                        }
+                      };
                     </script>
-
+            
                     <!-- Content Row -->
                     <div class="row">
 
